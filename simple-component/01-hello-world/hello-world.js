@@ -22,11 +22,13 @@ class HelloWorld extends HTMLElement {
     // closed: Denies access to the node(s) of a closed shadow root from JavaScript outside it
     
     // Make a new element to hold hello world
-    this._el = document.createElement('span')
+    this._el = document.createElement('h1')
     // Set the content of the new element
     this._el.innerHTML = 'Hello World'
     // Set styles on the new element
     this._el.style.color = 'red'
+    this._el.style.fontSize = '32px'
+    this._el.style.letterSpacing = '2px'
 
     // Add this element to the shadow root
     this._shadowRoot.appendChild(this._el)
@@ -40,12 +42,12 @@ customElements.define('hello-world', HelloWorld);
 
 /*  
 
-- Challenges - 1 - 
+- [x] Challenges - 1 - 
 
 The code above creates child element that is a span at line 21. 
 You might want to create any element. Change this to a h1.
 
-- Challenge - 2 - 
+- [x] Challenge - 2 - 
  
 Above the code applies styles to the element via JS. You can use 
 all CSS styles by converting them to camelCase. For example: 
